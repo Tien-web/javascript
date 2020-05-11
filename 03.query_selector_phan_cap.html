@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query selector phần tử con</title>
+    <style>
+        .hl-posts, .lastest-post {
+            border: 1px solid #222;
+            padding: 20px;
+            margin: 20px;
+            background-color: #ddd;
+
+        }
+
+        article {
+            border: 1px solid #222;
+            padding: 20px;
+            margin: 20px;
+            background-color: #ddd;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hl-posts">
+        <article class="main-article"></article>
+        <article class="more-article"></article>
+        <article class="more-article"></article>
+    </div>
+
+    <div class="lastest-post">
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+
+    <script>
+        /*Lấy ra toàn bộ bài báo trong hl-posts*/
+        var nodeArticlesInHlPosts = document.querySelectorAll('div.hl-posts > article.main-article'); 
+        console.log(nodeArticlesInHlPosts);
+    </script>
+</body>
+</html>

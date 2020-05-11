@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query selector</title>
+</head>
+<body>
+    <p id="p1" class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ullam quasi veniam ipsa accusamus, soluta voluptatum! Facere fuga aliquam earum dicta iste fugiat, neque vero! Numquam exercitationem optio consequuntur id?</p>
+    <p id="p2" class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id nemo laborum. Eaque amet maxime ratione vel, architecto earum accusantium ex temporibus? Ea ab quas quis magnam eaque in dolorum.</p>
+
+    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laudantium ex unde placeat impedit, voluptatum magni beatae cumque aut! Corrupti repellat iure maiores pariatur facilis quibusdam mollitia optio ex temporibus?</p>
+    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ducimus rem consequuntur quidem corporis placeat beatae debitis. Natus minima, labore, vel eligendi nam quas aspernatur animi quos voluptate, ut quisquam!</p>
+
+    <div id="text">
+        Tiến
+    </div>
+
+    <script>
+        /*query theo thẻ tag*/
+        var nodePDauTien = document.querySelector('p');
+        console.log(nodePDauTien);
+
+        var nodePToanBo = document.querySelectorAll('p');
+        console.log(nodePToanBo);
+
+        /*query theo ID*/
+        var nodePIdLaP2 = document.querySelector('#p2');
+        console.log(nodePIdLaP2);
+
+        /*query theo class name*/
+        var nodePClassLaDesc = document.querySelectorAll('.desc');
+        console.log(nodePClassLaDesc);
+
+        /*query theo thuộc tính []
+            1. query các node chứa thuộc tính.
+            2. query các node chứa thuộc tính chứa giá trị nào đó 
+        */
+        var nodeTonTaiThuocTinhLaId = document.querySelectorAll('[id]');
+        console.log(nodeTonTaiThuocTinhLaId);
+
+        var nodeCoThuocTinhIdLaText = document.querySelectorAll('[id= "text"');
+        console.log(nodeCoThuocTinhIdLaText);
+
+
+    </script>
+</body>
+</html>

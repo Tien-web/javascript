@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học về query selector kết hợp</title>
+</head>
+<body>
+    <p id="p1" class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ullam quasi veniam ipsa accusamus, soluta voluptatum! Facere fuga aliquam earum dicta iste fugiat, neque vero! Numquam exercitationem optio consequuntur id?</p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id nemo laborum. Eaque amet maxime ratione vel, architecto earum accusantium ex temporibus? Ea ab quas quis magnam eaque in dolorum.</p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id nemo laborum. Eaque amet maxime ratione vel, architecto earum accusantium ex temporibus? Ea ab quas quis magnam eaque in dolorum.</p>
+
+    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laudantium ex unde placeat impedit, voluptatum magni beatae cumque aut! Corrupti repellat iure maiores pariatur facilis quibusdam mollitia optio ex temporibus?</p>
+    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ducimus rem consequuntur quidem corporis placeat beatae debitis. Natus minima, labore, vel eligendi nam quas aspernatur animi quos voluptate, ut quisquam!</p>
+    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ducimus rem consequuntur quidem corporis placeat beatae debitis. Natus minima, labore, vel eligendi nam quas aspernatur animi quos voluptate, ut quisquam!</p>
+
+    <script>
+        /*Kết hợp 2 giá trị: queryselectorAll('p.content#p1[class]')
+            1. tag + classname:  queryselectorAll('p.content')
+            2. tag + id:  queryselectorAll('p#p1')
+            3. classname + id:  queryselectorAll('.content#p1')
+            4. tag + thuộc tính:  queryselectorAll('p[id]'')
+        */
+
+        var nodeKetHop = document.querySelectorAll('p.content');
+        console.log(nodeKetHop);
+
+    </script>
+
+</body>
+</html>

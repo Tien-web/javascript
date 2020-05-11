@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form thu thập select, radio & checkbox</title>
+</head>
+<body>
+    <form>
+        <!--thu thập dạng select-->
+        <div>
+            <label for="bangcap">Bằng cấp</label>
+            <select name="bangcao" id="bangcap">
+                <option value="trungcap">Trung cấp</option>
+                <option value="caodang">Cao dẳng</option>
+                <option value="daihoc">Đại học</option>
+            </select>
+        </div>
+
+        <!--thu thập dạng giới tính - radio-->
+        <div>
+            <label for="gioitinh">Giới tính</label>
+            <input type="radio" name="gioitinh" id="gioitinh" value="nam">Nam
+            <input type="radio" name="gioitinh" id="gioitinh" value="nữ">Nữ
+        </div>
+
+        <!--checkbox-->
+        <div>
+            <label for="sothich">Sở thích</label>
+            <input type="checkbox" name="sothich" id="sothich" value="bongda">Bóng đá
+            <input type="checkbox" name="sothich" id="sothich" value="bongchuyen">Bóng chuyền
+            <input type="checkbox" name="sothich" id="sothich" value="bongro">Bóng rổ
+        </div>
+
+        <div>
+            <input type="submit" value="Đăng ký">
+        </div>
+    </form>
+</body>
+</html>

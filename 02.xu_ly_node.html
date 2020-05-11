@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học về cách xử lý node</title>
+</head>
+<body>
+    <!--có 2 bước:
+        B1. Truy cập được tới node
+        B2. Xử lý trên node
+    -->
+    <div id="san-pham">
+
+    </div>
+
+    <script>
+        /*B1. Truy cập node*/
+        var nodeSanPham = document.getElementById('san-pham');
+        console.log(nodeSanPham);
+
+        /*B2. Xử lý trên node*/
+            /*B2.1. Xuất ra text trên node*/
+            nodeSanPham.innerText = 'Xin chào các bạn';
+
+            /*B2.2. Xuất ra HTML trên node*/
+            nodeSanPham.innerHTML = '<h1> iphone SE</h1>' + '<p>Mô tả iphone SE</p>';
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bắt đầu với object</title>
+</head>
+<body>
+    <script>
+        /*B1. Khởi tạo đối tượng*/
+        var iphoneSE2020 = new Object();
+        console.log(iphoneSE2020);
+
+        /*B2. Khởi tạo thuộc tính cho đối tượng*/
+        /*Xác định được đối tượng có bao nhiêu thuộc tính*/
+        iphoneSE2020.hinhAnh = 'https://vcdn-sohoa.vnecdn.net/2020/04/22/op-lung-cho-iphone-se-2020-1-8698-1587530202.jpg';
+        iphoneSE2020.ten = 'iphone SE 2020 64GB';
+        iphoneSE2020.giaGoc = 50000000;
+        iphoneSE2020.phanTramGiamGia = 0.2; /*20% = 0.2*/
+        iphoneSE2020.khuVuc = 'Đắk Lắk';
+        console.log(iphoneSE2020);
+
+        /*B3. Tạo ra các phương thức cho đối tượng*/
+        /*Xác định được đối tượng cần có những phương thức gì*/
+        iphoneSE2020.tinhGiaBan = function () {
+            /*this = đối tượng viết*/
+            var giaBan = this.giaGoc * (1 - this.phanTramGiamGia);
+            return giaBan;
+        }
+        console.log(iphoneSE2020);
+
+         /*B4. Sử dụng đối tượng*/
+        /*Lấy ra được các thuộc tính và sử dụng được các phương thức đã viết cho đối tượng*/
+        console.log('Hình ảnh của iphone SE là: ' + iphoneSE2020.hinhAnh);
+        console.log('Giá bán của iphone SE là: ' + iphoneSE2020.tinhGiaBan());
+
+        /*Tạo ra đối tượng iphone 11 -> khởi tạo đối tượng từ đầu và viết lại toàn bộ phương thức trong đối tượng*/
+        /*Tạo ra đối tượng iphone 11 -> khởi tạo đối tượng từ đầu và viết lại toàn bộ phương thức trong đối tượng*/
+    </script>
+</body>
+</html>

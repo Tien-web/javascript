@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truy cập node</title>
+    <style>
+        #danh-sach-san-pham {
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--Mục tiêu: Sử dụng javascript để truy cập tới node-->
+    <!--Truy cập theo ID cua node-->
+    <div id="danh-sach-san-pham">
+        <div name="san-pham">
+            <h1 class="san-pham-ten">iPhone SE</h1>
+        </div>
+        <div name="san-pham">
+            <h1 class="san-pham-ten">iPhone 11</h1>
+        </div>
+    </div>
+
+    <script>
+        /*C1. Truy cập theo ID của node*/
+        var nodeDanhSachSanPham = document.getElementById('danh-sach-san-pham');
+        console.log(nodeDanhSachSanPham);
+
+        /*C2. Truy cập theo tên node*/
+        var danhSachNodeSanPham = document.getElementsByName('san-pham');
+        console.log(danhSachNodeSanPham);
+        /*danh sách là 1 mảng*/
+        console.log(danhSachNodeSanPham[1]);
+
+        /*C3. Truy cập theo tag name -> tag chính là thẻ của HTML*/
+        /*Truy cập tất cả các node có tag là h1*/
+         var danhSachNodeH1 = document.getElementsByTagName('h1');
+         console.log(danhSachNodeH1);
+        /*lấy từng phần tử*/
+          console.log(danhSachNodeH1[0]);
+
+        /*C4. Truy cập theo phần tử cha*/
+        /*ví dụ: cha của san-pham la danh-sach-san-pham*/
+        /*B1. Truy cập tới node con */
+        var nodeCon = danhSachNodeSanPham[0];
+        /*B2. Từ node con truy cập tới node cha */
+        var nodeCha = nodeCon.parentElement;
+        console.log(nodeCha);
+
+        /*C5. Từ node cha truy cập tới các node con; Một cha có thể có nhiều con*/
+        /*Trả ra mảng các node con */
+        /*B1. Lấy node cha*/
+        var nodeCha2 = document.getElementById('danh-sach-san-pham');
+        /*B2. Từ node cha lấy danh sách node con */
+        var danhSachNodeCon = nodeCha2.childNodes;
+        console.log(danhSachNodeCon);
+    </script>
+</body>
+</html>
