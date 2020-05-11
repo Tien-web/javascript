@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học về local storage</title>
+</head>
+<body>
+    <input type="text" id="key" placeholder="Nhập key của local storage">
+    <input type="text" id="value" placeholder="Nhập giá trị của local storage">
+    <button onclick="onClickThemGiaTriVaoLocalStorage()">Thêm giá trị</button>
+    <button onclick="onClickXoaGiaTriKhoiLocalStorage()">Xóa giá trị</button>
+
+    <script>
+        //B1. Lưu trữ xuống local storage
+        localStorage.setItem('tenDangNhap', 'Tien07');
+        localStorage.setItem('matKhau', '123456');
+
+        //B2. Truy xuất dữ liệu trong local storage
+        var tenDangNhap = localStorage.getItem('tenDangNhap');
+        console.log('Tên đăng nhập là: ' + tenDangNhap);
+        console.log('Mật khẩu là: ' + localStorage.getItem('matKhau'));
+
+        function onClickThemGiaTriVaoLocalStorage() {
+            console.log('Gọi vào hàm onClickThemGiaTriVaoLocalStorage');
+            //TODO
+            //B1. Lấy ra giá trị key & value trong node input
+            var nodeInputKey = document.getElementById('key');
+            var key = nodeInputKey.value;
+
+            var nodeInputValue = document.getElementById('value');
+            var value = nodeInputValue.value;
+
+            //B2. Thực hiện lưu xuống localstorage
+            localStorage.setItem(key, value);
+
+            alert('Thêm dữ liệu thành công');
+        }
+
+        function onClickXoaGiaTriKhoiLocalStorage() {
+            console.log('Xóa hàm onClickXoaGiaTriKhoiLocalStorage');
+            //TODO
+            //B1: Lấy dữ liệu key trong node input
+            var nodeInputKey = document.getElementById('key');
+            var key = nodeInputKey.value;
+            
+            //B2. Xóa khỏi localstorage
+            localStorage.removeItem(key);
+        }
+
+        //B3. Xóa dữ liệu trong local storage
+
+    </script>
+</body>
+</html>
